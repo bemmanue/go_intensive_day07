@@ -72,11 +72,10 @@ value (e.g. for 13 and [1,5,10] it should give you [10,1,1,1]).
 
 The issue is, you have a gut feeling there is something wrong with this code. Your goal
 here is to write several tests (in *_test.go files) for this code, that will show it producing
-wrong results. Also, you need to write a separate function (you should call it minCoins2 )
+wrong results. Also, you need to write a separate function (you should call it minCoins2)
 which will have the same parameters, but will handle those cases successfully. In case
 duplicates are present in a slice of denominations or it is not sorted, the function should
 still give a correct result. In case it is empty, an empty slice should be returned.
-Chapter V
 
 
 ## Chapter V
