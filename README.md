@@ -37,7 +37,7 @@ Ladies and gentlemen, I present you...the Moneybag!"
 
 
 ## Chapter IV
-###Exercise 00: King's Bounty
+### Exercise 00: King's Bounty
 
 You keep listening to CEO's voice, but your eyes are looking at the code on your laptop.
 
@@ -80,7 +80,7 @@ Chapter V
 
 
 ## Chapter V
-###Exercise 01: Need for Speed
+### Exercise 01: Need for Speed
 
 Now as you have new version of code from EX00, let's test it for performance. Your goals
 here are:
@@ -94,7 +94,7 @@ here are:
 
 
 ## Chapter V
-###Exercise 02: Elder Scrolls
+### Exercise 02: Elder Scrolls
 
 Now, as you've fixed the bug and wrote some tests for your code, it's time to generate
 some documentation for it. Describe in comments in your code how is your solution
