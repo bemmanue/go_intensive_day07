@@ -1,9 +1,5 @@
 package main
 
-import (
-	"sort"
-)
-
 func minCoins(val int, coins []int) []int {
 	res := make([]int, 0)
 	i := len(coins) - 1
@@ -18,7 +14,7 @@ func minCoins(val int, coins []int) []int {
 }
 
 func minCoins2(val int, coins []int) []int {
-	coins = putInOrder(coins)
+	coins = removeDuplicates(coins)
 
 	var memo = make([][]int, val+1)
 
@@ -33,7 +29,6 @@ func minCoins2(val int, coins []int) []int {
 
 outer:
 	for i := 2; i <= val; i++ {
-
 		for _, coin := range coins {
 			if i == coin {
 				continue outer
@@ -44,25 +39,18 @@ outer:
 
 		for _, coin := range coins {
 			if i > coin {
-				mincoins[coin] = memo[i-coin]
+				mincoins[coin] = append(memo[i-coin], coin)
 			}
 		}
 
 		m := minimum(mincoins)
 
-		memo[i] = append(mincoins[m], m)
+		minSet := make([]int, len(mincoins[m]))
+		copy(minSet, mincoins[m])
+
+		memo[i] = minSet
 	}
 	return memo[val]
-}
-
-func putInOrder(coins []int) []int {
-	coins = removeDuplicates(coins)
-
-	sort.Slice(coins, func(i, j int) bool {
-		return coins[i] < coins[i]
-	})
-
-	return coins
 }
 
 func removeDuplicates(array []int) []int {

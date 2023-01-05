@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"strconv"
 	"testing"
 )
 
-var value int = 6
+var value int = 61
 
 // Паттерн "Табличные тесты"
 func TestMinCoins(t *testing.T) {
@@ -20,8 +19,8 @@ func TestMinCoins(t *testing.T) {
 
 	for i, coins := range coinsSet {
 		t.Run("Test_"+strconv.Itoa(i+1), func(t *testing.T) {
-			result := minCoins(value, coins)
-			fmt.Println(result)
+			//result := minCoins(value, coins)
+			result := minCoins2(value, coins)
 
 			coinsMap := make(map[int]bool)
 			for _, coin := range coins {
@@ -48,7 +47,7 @@ func TestMinCoins(t *testing.T) {
 }
 
 func minCount(val int, coins []int) int {
-	coins = putInOrder(coins)
+	coins = removeDuplicates(coins)
 
 	var max = math.MaxInt
 	var memo = make([]int, val+1)
