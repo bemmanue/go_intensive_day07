@@ -1,0 +1,14 @@
+Showing nodes accounting for 4830ms, 81.86% of 5900ms total
+Dropped 58 nodes (cum <= 29.50ms)
+Showing top 10 nodes out of 63
+      flat  flat%   sum%        cum   cum%
+    1770ms 30.00% 30.00%     1770ms 30.00%  runtime.madvise
+    1310ms 22.20% 52.20%     1310ms 22.20%  runtime.memclrNoHeapPointers
+     340ms  5.76% 57.97%      390ms  6.61%  runtime.mapaccess1_fast64
+     260ms  4.41% 62.37%      780ms 13.22%  runtime.mallocgc
+     240ms  4.07% 66.44%      380ms  6.44%  runtime.mapassign_fast64
+     230ms  3.90% 70.34%      230ms  3.90%  runtime.memmove
+     200ms  3.39% 73.73%     3730ms 63.22%  minCoins.minCoins2
+     180ms  3.05% 76.78%      260ms  4.41%  runtime.mapiternext
+     150ms  2.54% 79.32%     1900ms 32.20%  runtime.growslice
+     150ms  2.54% 81.86%      150ms  2.54%  runtime.usleep
