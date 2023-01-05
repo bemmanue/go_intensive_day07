@@ -35,7 +35,7 @@ func minCoins2(val int, coins []int) []int {
 
 func removeDuplicates(array []int) []int {
 	allKeys := make(map[int]bool)
-	list := []int{}
+	var list []int
 
 	for _, item := range array {
 		if _, value := allKeys[item]; !value {
